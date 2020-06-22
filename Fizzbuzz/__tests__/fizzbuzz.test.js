@@ -12,4 +12,8 @@ describe("Fizzbuzz", () => {
     expect(fizzbuzz(6)).toBe("Fizz");
   });
 
+  test("when passed a number divisible by 5, returns 'Buzz'", () => {
+    expect(fizzbuzz(5)).toBe("Buzz");
+  });
+
 });
