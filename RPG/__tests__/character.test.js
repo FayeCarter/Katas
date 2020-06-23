@@ -20,4 +20,12 @@ describe("Character", () => {
     expect(character.alive).toBe(true)
   });
 
+  describe("dealDamage", () => {
+
+    test("dealDamage reduces health by 1", () => {
+      character.dealDamage();
+      expect(character.health).toBe(999)
+    })
+  })
+
 });

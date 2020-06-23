@@ -4,4 +4,8 @@ export default class Character {
     this.level = 1;
     this.alive = true;
   }
+
+  dealDamage () {
+    this.health -= 1;
+  }
 }
