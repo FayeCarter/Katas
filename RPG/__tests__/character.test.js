@@ -46,8 +46,15 @@ describe("Character", () => {
   describe("heal", () => {
 
     test("heal increases health by 1", () => {
+      character.dealDamage();
+      expect(character.health).toBe(999)
       character.heal();
-      expect(character.health).toBe(1001)
+      expect(character.health).toBe(1000)
+    })
+
+    test("heal cannot increase health past 1000", () => {
+      character.heal();
+      expect(character.health).toBe(1000)
     })
 
   })

@@ -13,7 +13,9 @@ export default class Character {
   };
 
   heal () {
-    this.health += 1;
+    if (this.health < 1000 ) {
+      this.health += 1;
+    };
   };
 
   _checkForDead () {
