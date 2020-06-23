@@ -28,11 +28,18 @@ describe("Character", () => {
     })
 
     test("when dealDamage cannot reduces health past 0", () => {
-
       for(let i = 0; i < 1001 ; i++ ) {
         character.dealDamage();
       }
       expect(character.health).toBe(0)
+    })
+
+    test("when dealDamage cannot reduces health past 0", () => {
+      for(let i = 0; i < 1000 ; i++ ) {
+        character.dealDamage();
+      }
+      expect(character.health).toBe(0)
+      expect(character.alive).toBe(false)
     })
   })
 
