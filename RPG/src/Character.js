@@ -12,6 +12,10 @@ export default class Character {
     }
   };
 
+  heal () {
+    this.health += 1;
+  };
+
   _checkForDead () {
     this.health === 0 ? this.alive = false : this.alive;
   }

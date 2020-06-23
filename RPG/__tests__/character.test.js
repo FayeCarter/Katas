@@ -43,4 +43,13 @@ describe("Character", () => {
     })
   })
 
+  describe("heal", () => {
+
+    test("heal increases health by 1", () => {
+      character.heal();
+      expect(character.health).toBe(1001)
+    })
+
+  })
+
 });
