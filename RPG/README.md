@@ -14,16 +14,18 @@ It's recommended you perform this kata with a pairing partner and while writing 
 
 ## Iteration One
 
-All Characters, when created, have:
+1. All Characters, when created, have:
 
-Health, starting at 1000
-Level, starting at 1
-May be Alive or Dead, starting Alive (Alive may be a true/false)
-Characters can Deal Damage to Characters.
+- [ ] Health, starting at 1000
+- [ ] Level, starting at 1
+- [ ] May be Alive or Dead, starting Alive (Alive may be a true/false)
 
-Damage is subtracted from Health
-When damage received exceeds current Health, Health becomes 0 and the character dies
-A Character can Heal a Character.
+2. Characters can Deal Damage to Characters.
 
-Dead characters cannot be healed
-Healing cannot raise health above 1000
+- [ ] Damage is subtracted from Health
+- [ ] When damage received exceeds current Health, Health becomes 0 and the character dies
+
+3. A Character can Heal a Character.
+
+- [ ] Dead characters cannot be healed
+- [ ] Healing cannot raise health above 1000
