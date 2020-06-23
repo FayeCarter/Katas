@@ -16,9 +16,9 @@ It's recommended you perform this kata with a pairing partner and while writing 
 
 1. All Characters, when created, have:
 
-- [ ] Health, starting at 1000
-- [ ] Level, starting at 1
-- [ ] May be Alive or Dead, starting Alive (Alive may be a true/false)
+- [X] Health, starting at 1000
+- [X] Level, starting at 1
+- [X] May be Alive or Dead, starting Alive (Alive may be a true/false)
 
 2. Characters can Deal Damage to Characters.
 

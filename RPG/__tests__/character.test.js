@@ -16,4 +16,8 @@ describe("Character", () => {
     expect(character.level).toBe(1)
   });
 
+  test("Characters start at level 1", () => {
+    expect(character.alive).toBe(true)
+  });
+
 });
