@@ -22,10 +22,10 @@ It's recommended you perform this kata with a pairing partner and while writing 
 
 2. Characters can Deal Damage to Characters.
 
-- [ ] Damage is subtracted from Health
-- [ ] When damage received exceeds current Health, Health becomes 0 and the character dies
+- [X] Damage is subtracted from Health
+- [X] When damage received exceeds current Health, Health becomes 0 and the character dies
 
 3. A Character can Heal a Character.
 
-- [ ] Dead characters cannot be healed
-- [ ] Healing cannot raise health above 1000
+- [X] Dead characters cannot be healed
+- [X] Healing cannot raise health above 1000

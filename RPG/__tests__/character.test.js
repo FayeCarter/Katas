@@ -57,6 +57,15 @@ describe("Character", () => {
       expect(character.health).toBe(1000)
     })
 
+    test("dead characters cannot be healed", () => {
+      for(let i = 0; i < 1000 ; i++ ) {
+        character.dealDamage();
+      }
+      expect(character.alive).toBe(false)
+      character.heal();
+      expect(character.health).toBe(0)
+    })
+
   })
 
 });
