@@ -26,6 +26,14 @@ describe("Character", () => {
       character.dealDamage();
       expect(character.health).toBe(999)
     })
+
+    test("when dealDamage cannot reduces health past 0", () => {
+
+      for(let i = 0; i < 1001 ; i++ ) {
+        character.dealDamage();
+      }
+      expect(character.health).toBe(0)
+    })
   })
 
 });

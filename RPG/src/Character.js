@@ -6,6 +6,8 @@ export default class Character {
   }
 
   dealDamage () {
-    this.health -= 1;
+    if (this.health > 0 ) {
+      this.health -= 1;
+    }
   }
 }
