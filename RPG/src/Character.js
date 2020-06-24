@@ -12,9 +12,9 @@ export default class Character {
     }
   };
 
-  heal () {
-    if (this.health < 1000 && this.alive) {
-      this.health += 1;
+  heal (character) {
+    if (this.health < 1000 && this.alive && character !== this ) {
+      character.health += 1;
     };
   };
 

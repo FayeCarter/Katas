@@ -58,12 +58,12 @@ describe("Character", () => {
       expect(player2.health).toBe(999)
       player2.heal();
       expect(player2.health).toBe(1000)
-    })
+    });
 
     test("heal cannot increase health past 1000", () => {
       player2.heal();
       expect(player2.health).toBe(1000)
-    })
+    });
 
     test("dead characters cannot be healed", () => {
       for(let i = 0; i < 1000 ; i++ ) {
@@ -72,8 +72,12 @@ describe("Character", () => {
       expect(player2.alive).toBe(false)
       player2.heal();
       expect(player2.health).toBe(0)
-    })
+    });
 
-  })
-
+    test("character cannot heal themselves", () => {
+      player1.dealDamage(player2);
+      player2.heal(player2);
+      expect(player2.health).toBe(999)
+    });
+  });
 });
