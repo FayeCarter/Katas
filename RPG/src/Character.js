@@ -5,8 +5,8 @@ export default class Character {
     this.alive = true;
   };
 
-  dealDamage () {
-    if (this.health > 0 ) {
+  dealDamage (character) {
+    if (this.health > 0  && character !== this ) {
       this.health -= 1;
       this._checkForDead()
     }

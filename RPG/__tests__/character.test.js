@@ -41,6 +41,12 @@ describe("Character", () => {
       expect(character.health).toBe(0)
       expect(character.alive).toBe(false)
     })
+
+    test("character cannot deal damage to themselves", () => {
+      character.dealDamage(character);
+      expect(character.health).toBe(1000)
+    })
+    
   })
 
   describe("heal", () => {
