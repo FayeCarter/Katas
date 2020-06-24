@@ -26,18 +26,18 @@ describe("Character", () => {
 
     test("dealDamage reduces health by 1", () => {
       player1.dealDamage(player2);
-      expect(player2.health).toBe(999)
+      expect(player2.health).toBe(998)
     })
 
     test("when dealDamage cannot reduces health past 0", () => {
-      for(let i = 0; i < 1001 ; i++ ) {
+      for(let i = 0; i < 501 ; i++ ) {
         player1.dealDamage(player2);
       }
       expect(player2.health).toBe(0)
     })
 
     test("when dealDamage cannot reduces health past 0", () => {
-      for(let i = 0; i < 1000 ; i++ ) {
+      for(let i = 0; i < 500 ; i++ ) {
         player1.dealDamage(player2);
       }
       expect(player2.health).toBe(0)
@@ -55,9 +55,9 @@ describe("Character", () => {
 
     test("heal increases health by 1", () => {
       player1.dealDamage(player2);
-      expect(player2.health).toBe(999)
+      expect(player2.health).toBe(998)
       player1.heal(player2);
-      expect(player2.health).toBe(1000)
+      expect(player2.health).toBe(999)
     });
 
     test("heal cannot increase health past 1000", () => {
@@ -66,7 +66,7 @@ describe("Character", () => {
     });
 
     test("dead characters cannot be healed", () => {
-      for(let i = 0; i < 1000 ; i++ ) {
+      for(let i = 0; i < 500 ; i++ ) {
         player1.dealDamage(player2);
       }
       expect(player2.alive).toBe(false)
@@ -77,7 +77,7 @@ describe("Character", () => {
     test("character cannot heal themselves", () => {
       player1.dealDamage(player2);
       player2.heal(player2);
-      expect(player2.health).toBe(999)
+      expect(player2.health).toBe(998)
     });
   });
 
@@ -95,7 +95,7 @@ describe("Character", () => {
   
     test("Damage is reduced by 50% if player is 5 or more levels lower than opponent", () => {
       lowLevelPlayer.dealDamage(highLevelPlayer)
-      expect(highLevelPlayer.health).toBe(999.5)
+      expect(highLevelPlayer.health).toBe(999)
     });
   });
 });

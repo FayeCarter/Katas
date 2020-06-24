@@ -8,9 +8,9 @@ export default class Character {
   dealDamage (character) {
     if (character.health > 0  && character !== this ) {
       if (this.level - character.level <= -5) {
-        character.health -= 0.5;
+        character.health -= 1
       } else {
-        character.health -= 1;
+        character.health -= 2;
       }
       character._checkForDead()
     }
