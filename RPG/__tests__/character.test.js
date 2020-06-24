@@ -97,5 +97,10 @@ describe("Character", () => {
       lowLevelPlayer.dealDamage(highLevelPlayer)
       expect(highLevelPlayer.health).toBe(999)
     });
+
+    test("Damage is increased by 50% if player is 5 or more higher lower than opponent", () => {
+      highLevelPlayer.dealDamage(lowLevelPlayer)
+      expect(lowLevelPlayer.health).toBe(996)
+    });
   });
 });

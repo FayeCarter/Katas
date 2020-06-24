@@ -38,5 +38,5 @@ It's recommended you perform this kata with a pairing partner and while writing 
 
 3. When dealing damage:
 
-- [ ] If the target is 5 or more Levels above the attacker, Damage is reduced by 50%
-- [ ] If the target is 5 or more levels below the attacker, Damage is increased by 50%
+- [X] If the target is 5 or more Levels above the attacker, Damage is reduced by 50%
+- X ] If the target is 5 or more levels below the attacker, Damage is increased by 50%
