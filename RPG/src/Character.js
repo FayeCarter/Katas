@@ -7,7 +7,11 @@ export default class Character {
 
   dealDamage (character) {
     if (character.health > 0  && character !== this ) {
-      character.health -= 1;
+      if (this.level - character.level <= -5) {
+        character.health -= 0.5;
+      } else {
+        character.health -= 1;
+      }
       character._checkForDead()
     }
   };

@@ -80,4 +80,22 @@ describe("Character", () => {
       expect(player2.health).toBe(999)
     });
   });
+
+  describe("High level players", () => {
+
+    let highLevelPlayer;
+    let lowLevelPlayer;
+  
+    beforeEach(() => {
+      highLevelPlayer = new Character();
+      lowLevelPlayer = new Character();
+
+      highLevelPlayer.level = 7;
+    });
+  
+    test("Damage is reduced by 50% if player is 5 or more levels lower than opponent", () => {
+      lowLevelPlayer.dealDamage(highLevelPlayer)
+      expect(highLevelPlayer.health).toBe(999.5)
+    });
+  });
 });

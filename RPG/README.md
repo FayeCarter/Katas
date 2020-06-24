@@ -34,7 +34,7 @@ It's recommended you perform this kata with a pairing partner and while writing 
 
 - [X] 1. A Character cannot Deal Damage to itself.
 
-2. A Character can only Heal itself.
+- [X] 2. A Character can only Heal itself.
 
 3. When dealing damage:
 
