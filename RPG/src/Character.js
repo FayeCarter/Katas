@@ -1,3 +1,6 @@
+const REGULAR_DAMAGE = 2;
+const LOW_DAMAGE = 1;
+
 export default class Character {
   constructor() {
     this.health = 1000;
@@ -8,9 +11,9 @@ export default class Character {
   dealDamage (character) {
     if (character.health > 0  && character !== this ) {
       if (this.level - character.level <= -5) {
-        character.health -= 1
+        character.health -= LOW_DAMAGE;
       } else {
-        character.health -= 2;
+        character.health -= REGULAR_DAMAGE;
       }
       character._checkForDead()
     }
