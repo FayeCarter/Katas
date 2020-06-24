@@ -56,12 +56,12 @@ describe("Character", () => {
     test("heal increases health by 1", () => {
       player1.dealDamage(player2);
       expect(player2.health).toBe(999)
-      player2.heal();
+      player1.heal(player2);
       expect(player2.health).toBe(1000)
     });
 
     test("heal cannot increase health past 1000", () => {
-      player2.heal();
+      player1.heal(player2);
       expect(player2.health).toBe(1000)
     });
 
@@ -70,7 +70,7 @@ describe("Character", () => {
         player1.dealDamage(player2);
       }
       expect(player2.alive).toBe(false)
-      player2.heal();
+      player1.heal(player2);
       expect(player2.health).toBe(0)
     });
 

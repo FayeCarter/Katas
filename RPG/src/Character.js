@@ -13,7 +13,7 @@ export default class Character {
   };
 
   heal (character) {
-    if (this.health < 1000 && this.alive && character !== this ) {
+    if (character.health < 1000 && character.alive && character !== this ) {
       character.health += 1;
     };
   };
