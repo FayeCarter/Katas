@@ -10,11 +10,7 @@ export default class Character {
 
   dealDamage (character) {
     if (character.health > 0  && character !== this ) {
-      if (this.level - character.level <= -5) {
-        character.health -= LOW_DAMAGE;
-      } else {
-        character.health -= REGULAR_DAMAGE;
-      }
+      character.health -= this._getDamageValue(character)
       character._checkForDead()
     }
   };
@@ -27,5 +23,14 @@ export default class Character {
 
   _checkForDead () {
     this.health === 0 ? this.alive = false : this.alive;
+  }
+
+  _getDamageValue(defendingPlayer) {
+    const levelDifference = this.level - defendingPlayer.level;
+    if (levelDifference <= -5 ) {
+      return LOW_DAMAGE;
+    } else {
+      return REGULAR_DAMAGE;
+    }
   }
 };
