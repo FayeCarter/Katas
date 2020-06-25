@@ -7,6 +7,7 @@ export default class Character {
     this.health = 1000;
     this.level = 1;
     this.alive = true;
+    this.range = "";
   };
 
   dealDamage (character) {

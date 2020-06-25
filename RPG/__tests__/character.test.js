@@ -22,6 +22,10 @@ describe("Character", () => {
     expect(player1.alive).toBe(true)
   });
 
+  test("character have a range attribute", () => {
+    expect(player1.range).toBe("")
+  })
+
   describe("dealDamage", () => {
 
     test("dealDamage reduces health by 1", () => {
@@ -103,4 +107,6 @@ describe("Character", () => {
       expect(lowLevelPlayer.health).toBe(996)
     });
   });
+
+
 });
