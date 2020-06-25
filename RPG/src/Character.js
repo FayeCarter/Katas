@@ -15,9 +15,12 @@ export default class Character  {
   };
 
   dealDamage (character) {
-    if (character.health > 0  && character !== this ) {
-      character.health -= this._getDamageValue(character)
-      character._checkForDead()
+
+    if (character.location - this.location <= this.range) {
+      if (character.health > 0  && character !== this ) {
+        character.health -= this._getDamageValue(character)
+        character._checkForDead()
+      }
     }
   };
 

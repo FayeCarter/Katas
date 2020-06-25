@@ -57,6 +57,14 @@ describe("Character", () => {
       player1.dealDamage(player1);
       expect(player1.health).toBe(1000)
     })
+
+    test("character can only deal damage to an opponent in range", () => {
+      for (let i=0 ; i < 21; i++ ) {
+        player1.move("right")
+      }
+      player1.dealDamage(player1);
+      expect(player1.health).toBe(1000)
+    })
     
   })
 
@@ -118,14 +126,13 @@ describe("Character", () => {
     test("Melee characters have a range of 2 meters", () => {
       let meleeCharacter = new Character("melee");
       expect(meleeCharacter.range).toBe(2)
-    })
+    });
 
     test("Ranged characters have a range of 20 meters", () => {
       let rangedCharacter = new Character("ranged");
       expect(rangedCharacter.range).toBe(20)
-    })
-
-  })
+    });
+  });
 
   describe("Move", () => {
 
@@ -133,13 +140,12 @@ describe("Character", () => {
       let character = new Character();
       character.move("right")
       expect(character.location).toBe(1)
-    })
+    });
 
     test("Moving a character left decreases their location by 1", () => {
       let character = new Character();
       character.move("left")
       expect(character.location).toBe(-1)
-    })
-
-  })
+    });
+  });
 });
