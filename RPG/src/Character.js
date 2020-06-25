@@ -10,13 +10,13 @@ export default class Character  {
     this.health = 1000;
     this.level = 1;
     this.alive = true;
-    this.range = this._getRange();
+    this.range = this._setRange();
     this.location = 0;
   };
 
   dealDamage (character) {
 
-    if (character.location - this.location <= this.range) {
+    if (this.__getRange(character)) {
       if (character.health > 0  && character !== this ) {
         character.health -= this._getDamageValue(character)
         character._checkForDead()
@@ -59,11 +59,16 @@ export default class Character  {
     }
   }
 
-  _getRange() {
+  _setRange() {
     if (this.type === "ranged") {
       return RANGED_RANGE;
     } else {
       return MELEE_RANGE;
     }
   }
+
+  __getRange(character) {
+    return character.location - this.location <= this.range;
+  }
+
 };
