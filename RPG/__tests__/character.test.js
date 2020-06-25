@@ -134,5 +134,12 @@ describe("Character", () => {
       character.move("right")
       expect(character.location).toBe(1)
     })
+
+    test("Moving a character left decreases their location by 1", () => {
+      let character = new Character();
+      character.move("left")
+      expect(character.location).toBe(-1)
+    })
+
   })
 });

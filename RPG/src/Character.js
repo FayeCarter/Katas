@@ -34,7 +34,11 @@ export default class Character  {
   };
 
   move (direction) {
-    this.location += 1;
+    if ( direction === "right" ) {
+      this.location += 1 
+    } else if ( direction === "left") {
+      this.location -= 1;
+    };
   ;}
 
   _checkForDead () {
