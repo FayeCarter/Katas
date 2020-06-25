@@ -46,6 +46,9 @@ It's recommended you perform this kata with a pairing partner and while writing 
 
 - [X] 2. Melee fighters have a range of 2 meters.
 
-- [ ] 3. Ranged fighters have a range of 20 meters.
+- [X] 3. Ranged fighters have a range of 20 meters.
 
-- [ ] 4. Characters must be in range to deal damage to a target.
+- [X] 4. Characters must be in range to deal damage to a target.
+
+### Notes
+ - Refactor code to have action class?
