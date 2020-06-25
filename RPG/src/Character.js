@@ -15,19 +15,10 @@ export default class Character  {
   };
 
   dealDamage (character) {
-
-    if (this.__getRange(character)) {
-      if (character.health > 0  && character !== this ) {
-        character.health -= this._getDamageValue(character)
-        character._checkForDead()
-      }
+    if (this._inRange(character) && this._canAttack(character)) {
+      character.health -= this._getDamageValue(character)
+      character._checkForDead()
     }
-  };
-
-  heal (character) {
-    if (character.health < 1000 && character.alive && character !== this ) {
-      character.health += 1;
-    };
   };
 
   heal (character) {
@@ -67,8 +58,12 @@ export default class Character  {
     }
   }
 
-  __getRange(character) {
+  _inRange(character) {
     return character.location - this.location <= this.range;
+  }
+
+  _canAttack(character) {
+    return character.health > 0  && character !== this;
   }
 
 };
