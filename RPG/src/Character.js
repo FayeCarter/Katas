@@ -11,6 +11,7 @@ export default class Character  {
     this.level = 1;
     this.alive = true;
     this.range = this._getRange();
+    this.location = 0;
   };
 
   dealDamage (character) {

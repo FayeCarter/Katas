@@ -26,6 +26,11 @@ describe("Character", () => {
     expect(player1.range).toBeDefined()
   })
 
+
+  test("character has a start location of 0", () => {
+    expect(player1.location).toBe(0)
+  })
+
   describe("dealDamage", () => {
 
     test("dealDamage reduces health by 1", () => {
