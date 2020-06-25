@@ -42,9 +42,9 @@ It's recommended you perform this kata with a pairing partner and while writing 
 - [X] If the target is 5 or more levels below the attacker, Damage is increased by 50%
 
 ## Iteration Three
-- [ ] 1. Characters have an attack Max Range.
+- [X] 1. Characters have an attack Max Range.
 
-- [ ] 2. Melee fighters have a range of 2 meters.
+- [X] 2. Melee fighters have a range of 2 meters.
 
 - [ ] 3. Ranged fighters have a range of 20 meters.
 

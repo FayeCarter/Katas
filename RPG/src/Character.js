@@ -1,6 +1,8 @@
 const HIGH_DAMAGE = 4;
 const REGULAR_DAMAGE = 2;
 const LOW_DAMAGE = 1;
+const MELEE_RANGE = 2;
+const RANGED_RANGE = 20;
 
 export default class Character  {
   constructor(option) {
@@ -8,7 +10,7 @@ export default class Character  {
     this.health = 1000;
     this.level = 1;
     this.alive = true;
-    this.range = 2;
+    this.range = this._getRange();
   };
 
   dealDamage (character) {
@@ -36,6 +38,14 @@ export default class Character  {
       return LOW_DAMAGE;
     } else {
       return REGULAR_DAMAGE;
+    }
+  }
+
+  _getRange() {
+    if (this.type === "ranged") {
+      return RANGED_RANGE;
+    } else {
+      return MELEE_RANGE;
     }
   }
 };

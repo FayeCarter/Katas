@@ -114,6 +114,12 @@ describe("Character", () => {
       let meleeCharacter = new Character("melee");
       expect(meleeCharacter.range).toBe(2)
     })
+
+    test("Ranged characters have a range of 20 meters", () => {
+      let rangedCharacter = new Character("ranged");
+      expect(rangedCharacter.range).toBe(20)
+    })
+
   })
 
 
