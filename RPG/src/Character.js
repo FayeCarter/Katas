@@ -2,12 +2,13 @@ const HIGH_DAMAGE = 4;
 const REGULAR_DAMAGE = 2;
 const LOW_DAMAGE = 1;
 
-export default class Character {
-  constructor() {
+export default class Character  {
+  constructor(option) {
+    this.type = option;
     this.health = 1000;
     this.level = 1;
     this.alive = true;
-    this.range = "";
+    this.range = 2;
   };
 
   dealDamage (character) {

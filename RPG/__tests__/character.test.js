@@ -23,7 +23,7 @@ describe("Character", () => {
   });
 
   test("character have a range attribute", () => {
-    expect(player1.range).toBe("")
+    expect(player1.range).toBeDefined()
   })
 
   describe("dealDamage", () => {
@@ -107,6 +107,14 @@ describe("Character", () => {
       expect(lowLevelPlayer.health).toBe(996)
     });
   });
+
+  describe("Character types", () => {
+
+    test("Melee characters have a range of 2 meters", () => {
+      let meleeCharacter = new Character("melee");
+      expect(meleeCharacter.range).toBe(2)
+    })
+  })
 
 
 });
