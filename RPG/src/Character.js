@@ -27,6 +27,16 @@ export default class Character  {
     };
   };
 
+  heal (character) {
+    if (character.health < 1000 && character.alive && character !== this ) {
+      character.health += 1;
+    };
+  };
+
+  move (direction) {
+    this.location += 1;
+  ;}
+
   _checkForDead () {
     this.health === 0 ? this.alive = false : this.alive;
   }

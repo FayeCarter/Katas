@@ -127,5 +127,12 @@ describe("Character", () => {
 
   })
 
+  describe("Move", () => {
 
+    test("Moving a character right increases their location by 1", () => {
+      let character = new Character();
+      character.move("right")
+      expect(character.location).toBe(1)
+    })
+  })
 });
