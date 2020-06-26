@@ -1,4 +1,5 @@
 import Game from "../src/Game";
+import Player from "../src/Player";
 
 describe("Game", () => {
   test("A new Game is not complete", () => {
@@ -19,5 +20,13 @@ describe("Game", () => {
   test("Has a Starting Score of 0:0", () => {
     let game = new Game();
     expect(game.score).toBe("0:0");
+  })
+
+  describe("Players", () => {
+    test("Uses the Player Class", () => {
+      let game = new Game();
+      expect(game.player1).toBeInstanceOf(Player);
+      expect(game.player2).toBeInstanceOf(Player);
+    })
   })
 })
