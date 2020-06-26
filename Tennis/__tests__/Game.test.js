@@ -15,4 +15,9 @@ describe("Game", () => {
     let game = new Game();
     expect(game.player2).toBeDefined();
   })
+
+  test("Has a Starting Score of 0:0", () => {
+    let game = new Game();
+    expect(game.score).toBe("0:0");
+  })
 })
