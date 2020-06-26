@@ -28,5 +28,11 @@ describe("Game", () => {
       expect(game.player1).toBeInstanceOf(Player);
       expect(game.player2).toBeInstanceOf(Player);
     })
+
+    test("scorePoint() increases the score", () => {
+      let game = new Game();
+      game.scorePoint(1)
+      expect(game.score).toBe("15:0");
+    })
   })
 })
