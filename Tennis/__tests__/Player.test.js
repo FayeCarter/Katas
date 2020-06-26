@@ -19,5 +19,13 @@ describe("Player", () => {
       player.addScore();
       expect(player.score).toBe(30);
     });
+
+    test("third score, increases to 40", () => {
+      let player = new Player();
+      player.addScore();
+      player.addScore();
+      player.addScore();
+      expect(player.score).toBe(40);
+    });
   });
 });
