@@ -4,6 +4,6 @@ export default class Game {
   };
 
   addScore() {
-    this.score = 15;
+    this.score += 15;
   }
 };
