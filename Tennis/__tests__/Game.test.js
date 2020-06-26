@@ -10,4 +10,9 @@ describe("Game", () => {
     let game = new Game();
     expect(game.player1).toBeDefined();
   })
+
+  test("Has a Player2", () => {
+    let game = new Game();
+    expect(game.player2).toBeDefined();
+  })
 })
