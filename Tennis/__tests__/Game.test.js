@@ -31,8 +31,14 @@ describe("Game", () => {
 
     test("scorePoint() increases the score", () => {
       let game = new Game();
-      game.scorePoint(1)
+      game.scorePoint("player1")
       expect(game.score).toBe("15:0");
+    })
+
+    test("scorePoint('player2')increases the score", () => {
+      let game = new Game();
+      game.scorePoint("player2")
+      expect(game.score).toBe("0:15");
     })
   })
 })

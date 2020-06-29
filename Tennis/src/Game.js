@@ -11,7 +11,13 @@ export default class Game {
   };
 
   scorePoint(player) {
-    let gamePoint = this.player1.addScore();
-    this.score = `${gamePoint}:0`
+
+    if ( player === "player1" ) {
+      let gamePoint = this.player1.addScore();
+      this.score = `${gamePoint}:0`
+    } else if ( player === "player2" ) {
+      let gamePoint = this.player2.addScore();
+      this.score = `0:${gamePoint}`
+    }
   }
 };
