@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1593503595470" clover="3.2.0">
-  <project timestamp="1593503595470" name="All files">
-    <metrics statements="17" coveredstatements="17" conditionals="5" coveredconditionals="4" methods="6" coveredmethods="6" elements="28" coveredelements="27" complexity="0" loc="17" ncloc="17" packages="1" files="3" classes="3"/>
+<coverage generated="1593503910928" clover="3.2.0">
+  <project timestamp="1593503910928" name="All files">
+    <metrics statements="22" coveredstatements="22" conditionals="5" coveredconditionals="4" methods="7" coveredmethods="7" elements="34" coveredelements="33" complexity="0" loc="22" ncloc="22" packages="1" files="3" classes="3"/>
     <file name="Game.js" path="/Users/FayeCarter/Documents/Learning/Katas/Tennis/src/Game.js">
       <metrics statements="10" coveredstatements="10" conditionals="5" coveredconditionals="4" methods="2" coveredmethods="2"/>
       <line num="7" count="7" type="stmt"/>
@@ -24,9 +24,14 @@
       <line num="11" count="8" type="stmt"/>
     </file>
     <file name="Scorecard.js" path="/Users/FayeCarter/Documents/Learning/Katas/Tennis/src/Scorecard.js">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <line num="3" count="2" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <line num="3" count="3" type="stmt"/>
+      <line num="4" count="3" type="stmt"/>
+      <line num="5" count="3" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="15" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>
