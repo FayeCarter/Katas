@@ -1,6 +1,6 @@
 const SCORING_SYSTEM = [0, 15, 30, 40];
 
-export default class Game {
+export default class PlayerScore {
   constructor () {
     this.score = 0;
     this.count = 0;
