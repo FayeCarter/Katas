@@ -7,9 +7,18 @@ describe("Checkout", () => {
     expect(checkout.receipt).toBe(emptyReceipt);
   });
 
-  it("1 can of beans can be added to the order", () => {
-    let checkout = new Checkout();
-    checkout.addItem("beans")
-    expect(checkout.basket).toEqual({ "beans": 1 });
+  describe("addItem", () => {
+    it("1 can of beans can be added to the order", () => {
+      let checkout = new Checkout();
+      checkout.addItem("beans")
+      expect(checkout.basket).toEqual({ "beans": 1 });
+    });
+
+    it("1 can of beans and 1 beer can be added to the order", () => {
+      let checkout = new Checkout();
+      checkout.addItem("beans")
+      checkout.addItem("beer")
+      expect(checkout.basket).toEqual({ "beans": 1, "beer": 1 });
+    });
   });
 })

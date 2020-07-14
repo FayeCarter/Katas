@@ -6,6 +6,6 @@ export default class Checkout {
   };
 
   addItem(item) {
-    this.basket["beans"] = 1
+    this.basket[`${item}`] = 1
   }
 };
