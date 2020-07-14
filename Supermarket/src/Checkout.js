@@ -2,10 +2,10 @@ export default class Checkout {
   constructor(
   ) {
     this.receipt = "Item | Price /n Total Price /n";
-    this.order = {};
+    this.basket = {};
   };
 
   addItem(item) {
-    this.order["beans"] = 1
+    this.basket["beans"] = 1
   }
 };

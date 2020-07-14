@@ -10,6 +10,6 @@ describe("Checkout", () => {
   it("1 can of beans can be added to the order", () => {
     let checkout = new Checkout();
     checkout.addItem("beans")
-    expect(checkout.order).toEqual({ "beans": 1 });
+    expect(checkout.basket).toEqual({ "beans": 1 });
   });
 })
