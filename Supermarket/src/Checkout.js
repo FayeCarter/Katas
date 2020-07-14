@@ -6,8 +6,12 @@ export default class Checkout {
   };
 
   addItem(items) {
-    for ( let item in items) {
-      this.basket[`${item}`] = items[item]
+    if ( typeof items === "string") {
+      this.basket[`${items}`] = 1
+    } else {
+      for ( let item in items) {
+        this.basket[`${item}`] = items[item]
+      }
     }
   }
 };
