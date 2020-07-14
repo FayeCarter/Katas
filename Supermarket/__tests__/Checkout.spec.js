@@ -27,4 +27,14 @@ describe("Checkout", () => {
       expect(checkout.basket).toEqual({ "beans": 2, "beer": 1 });
     });
   });
-})
+
+  describe("printReceipt", () => {
+    it("printReceipt for 1 can of beans", () => {
+      let checkout = new Checkout();
+      let emptyReceipt = "Item | Quantity | Price /n beans 1 £0.20 /n Total Price £0.20"
+
+      checkout.addItem("beans")
+      expect(checkout.printReceipt()).toEqual(emptyReceipt);
+    });
+  });
+});

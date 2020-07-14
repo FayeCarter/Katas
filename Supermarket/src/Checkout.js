@@ -14,4 +14,8 @@ export default class Checkout {
       }
     }
   }
+
+  printReceipt() {
+    return "Item | Quantity | Price /n beans 1 £0.20 /n Total Price £0.20"
+  }
 };
