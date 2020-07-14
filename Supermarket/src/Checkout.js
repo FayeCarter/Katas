@@ -2,8 +2,10 @@ export default class Checkout {
   constructor(
   ) {
     this.receipt = "Item | Price /n Total Price /n";
+    this.order = {};
   };
-  showScore() {
-    return this.scorecard.score
+
+  addItem(item) {
+    this.order["beans"] = 1
   }
 };
