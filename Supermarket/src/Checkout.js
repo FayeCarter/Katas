@@ -5,7 +5,9 @@ export default class Checkout {
     this.basket = {};
   };
 
-  addItem(item) {
-    this.basket[`${item}`] = 1
+  addItem(items) {
+    for ( let item in items) {
+      this.basket[`${item}`] = items[item]
+    }
   }
 };

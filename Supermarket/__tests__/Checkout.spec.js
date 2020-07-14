@@ -20,5 +20,11 @@ describe("Checkout", () => {
       checkout.addItem("beer")
       expect(checkout.basket).toEqual({ "beans": 1, "beer": 1 });
     });
+
+    it("Multiple items can be added to the order at the same time", () => {
+      let checkout = new Checkout();
+      checkout.addItem({ "beans": 2, "beer": 1 })
+      expect(checkout.basket).toEqual({ "beans": 2, "beer": 1 });
+    });
   });
 })
