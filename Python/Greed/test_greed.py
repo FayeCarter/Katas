@@ -21,3 +21,10 @@ def test_include_four_1s():
   """
   assert greed([1,1,1,1,3]) == 1100
 
+def test_include_five_1s():
+  """
+  When players roll contains five 1s
+  Return score of 1200
+  """
+  assert greed([1,1,1,1,1]) == 1200
+
