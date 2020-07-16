@@ -1,8 +1,9 @@
 from .greed import greed
 
-def test_roll_5():
+def test_include_1():
   """
-  Player must roll 5 dice
+  When player rolls contains a 1
+  Return score of 100
   """
-  assert greed([1,2,3]) == "You didn't roll renough dice"
-  assert greed([1,2,3,4,5,6]) == "You rolled too many dice"
+  assert greed([1,2,3,4,3]) == 100
+

@@ -1,5 +1,3 @@
 def greed(numbers):
-  if len(numbers) < 5:
-    return "You didn't roll renough dice"
-  elif len(numbers) > 5:
-    return "You rolled too many dice"
+  if 1 in numbers:
+    return 100
