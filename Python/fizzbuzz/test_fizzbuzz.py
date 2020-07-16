@@ -23,3 +23,11 @@ def test_should_return_Buzz():
   assert fizzbuzz(5) == "Buzz"
   assert fizzbuzz(10) == "Buzz"
   assert fizzbuzz(20) == "Buzz"
+
+def test_should_return_Buzz():
+  """
+  For numbers not divisible by 5, fizzbuzz should return "Buzz"
+  """
+  assert fizzbuzz(15) == "Fizzbuzz"
+  assert fizzbuzz(30) == "Fizzbuzz"
+  assert fizzbuzz(45) == "Fizzbuzz"
