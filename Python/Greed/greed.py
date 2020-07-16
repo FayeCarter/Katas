@@ -4,4 +4,4 @@ def greed(numbers):
     if count >= 3:
       return 1000 + (count - 3) * 100
     else:
-      return 100
+      return (count * 100)
