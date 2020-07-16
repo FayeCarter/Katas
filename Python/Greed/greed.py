@@ -1,3 +1,6 @@
 def greed(numbers):
   if 1 in numbers:
-    return 100
+    if numbers.count(1) == 3:
+      return 1000
+    else:
+      return 100
