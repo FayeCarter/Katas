@@ -13,3 +13,10 @@ def test_returns_terms_for_first_two_terms():
   Return terms
   """
   assert fibonacci(1) == 1
+
+def test_returns_sum_of_previous_two_terms():
+  """
+  When 2 term
+  Return 1
+  """
+  assert fibonacci(2) == 1
