@@ -1,3 +1,3 @@
 def fibonacci(terms):
-  if terms == 0:
-    return 0
+  if terms <= 1:
+    return terms
