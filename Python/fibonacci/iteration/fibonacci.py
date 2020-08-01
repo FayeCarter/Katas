@@ -1,2 +1,2 @@
 def fibonacci(terms):
-  return 0
+  return terms
